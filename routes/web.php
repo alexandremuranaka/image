@@ -16,3 +16,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::resource('/admin/images', 'ImageController');
+Route::post('/admin/images/jlist','ImageController@jindex');
+Route::resource('/admin/pages', 'PageController');

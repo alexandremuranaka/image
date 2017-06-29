@@ -16,9 +16,14 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
         $images = Images::first()->get();
         return view('admin.images.index',['images' => $images]);
+    }
+
+    public function jindex()
+    {
+      $images = Images::first()->get();
+      return response()->json($images);
     }
 
     /**

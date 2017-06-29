@@ -1,0 +1,90 @@
+@font_family: 'Oxygen', sans-serif;
+@primary_color: #1c66a9;
+@primary_color_hover: #125694;
+@secondary_color:#f7c04b;
+@secondary_color_hover:#e4a41b;
+@red:#ca0000;
+@red_hover:#830000;
+@title_color: #1c66a9;
+@text_color: #333;
+@anchor_color:#333;
+@anchor_color_hover:#000;
+@shadow: 0 1px 3px rgba(0,0,0,0.25);
+@transition: all 0.5s;
+
+.btn{
+  width:100%;padding: 10px 20px;
+  &.btn-primary{
+    background:@primary_color;
+    &:hover{background:@primary_color_hover;}
+  }
+  &.btn-sencondary{
+    background:@secondary_color;
+    &:hover{background: @secondary_color_hover;}
+  }
+  &.btn-danger{
+    background:@red;
+    &:hover{background:@red_hover;}
+  }
+}
+select,textarea,input[type="email"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="url"],input[type="file"]{
+  width:100%;padding:5px;
+}
+.table{
+  img{width:60px;height:inherit;;}
+}
+
+.page{
+  padding: 120px 0;
+  .page_banner{background-position:center center;background-repeat: no-repeat;background-size:cover;width:100%;height:350px;}
+}
+
+/* header */
+#header{
+  background:#fff;position:fixed;top:0;right:0;left:0;z-index:10;
+  box-shadow: @shadow;
+  img{width:100%;margin:12px 0;}
+  #btn_menu{
+    width:40px;height:40px;margin:20px 15px 15px;cursor:pointer;
+    i.fa{font-size:30px;color:@primary_color;}
+    &:hover{color:@primary_color_hover;}
+  }
+}
+/* menu */
+#menu{
+  background: #fff;top:0;left:-300px;bottom:0;position:fixed;z-index: 9;
+  -webkit-transition:@transition;
+  -moz-transition:@transition;
+  -ms-transition:@transition;
+  -o-transition:@transition;
+}
+/* bg menu */
+#menu_bg{
+  background:rgba(0,0,0,0.75);position:fixed;top:0;right:0;bottom:0;left:0;z-index:8;
+  &.show{display:block;}
+}
+/*  */
+#img_select{
+  position:fixed;top:0;right:0;bottom:0;left:0;z-index:5;
+  display:none;
+  &.show{display:block;}
+  .container{
+    background:#fff;margin:30px auto;padding:15px;position:relative;z-index: 2;
+  }
+  .img_bg{
+    #menu_bg
+  }
+  #img_display{
+    .img_holder{border:solid 2px #fff;width:calc(25% - 10px);margin:10px;float:left;
+      &.selected{border:solid 2px #ca0000;}
+      img{width:100%;}
+    }
+  }
+  #img_data{
+    background:#ccc;padding:15px;
+    img{width:100%;}
+    h3{color:#ca0000;}
+    #btn_img_delete{}
+    #btn_img_select{}
+  }
+}
